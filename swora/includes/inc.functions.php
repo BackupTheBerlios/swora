@@ -761,8 +761,8 @@ function saveerror($text,$filename=0,$line=0,$domail=0,$saveindb=1) {
 	if(is_array($text)) 	{foreach($text as $a) {$stext .= "$a\r\n";}}
 	else 			{$stext = $text;}
 
-	$text = addslashes($text);
-	$stext = addslashes($stext);
+	$text 	= addslashes($text);
+	$stext 	= addslashes($stext);
 
 	if($saveindb && is_object($db)) {
 		if(!$db->query("SELECT id FROM $tab[error] WHERE text='$stext'")) {
@@ -771,7 +771,7 @@ function saveerror($text,$filename=0,$line=0,$domail=0,$saveindb=1) {
 	}
 	if($domail && is_object($sendmail)) 		{$sendmail->mail($adminmail,"!!!! Warning !!!",$stext,"FROM: ERROR@$httphost",0);}
 	if(!@is_file("errors.html")) @touch("errors.html",0777);
-	$fileentry = implode("",file("errors.html"));
+	$fileentry = @implode("",@file("errors.html"));
 	if(@is_writeable("errors.html")) {
 		$fp = @fopen("errors.html","w");
 			$text = "<pre><hr width=100% noshade>".mkdate()." | <i>File: $filename <br>Line: $line</i><br>$text</pre>";
