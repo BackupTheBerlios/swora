@@ -100,7 +100,7 @@ if(!$boardid && $threadid) 	{$thisboard	= getboard($thisthread[parent_boardid]);
 				eval("\$incf[boardbit] .= \"".gettemplate("forum.index.board.bit")."\";");
 				$j++;
 			}
-			if($cat[board_comment]) eval("\$board_comment = \"".gettemplate("forum.index.catcomment")."\";");
+			if($cat[board_comment]) eval("\$board_comment = \"".gettemplate("forum.index.catcomment")."\";");else $board_comment="";
 			eval("\$incf[catbit] .= \"".gettemplate("forum.index.cat.bit")."\";");
 		}
 		eval("\$incf[action] = \"".gettemplate("forum.index.cat")."\";");
