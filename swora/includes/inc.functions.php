@@ -601,7 +601,7 @@ function getuseravatar($userid=0) {
 #############################
 function mkdate($timestamp=0, $sort=0) {
 	if(!$timestamp) $timestamp = time();
-	if(!$sort) $sort = "d. M, H:m";
+	if(!$sort) $sort = "d. M, H:I";
 	return @date($sort,$timestamp);
 }
 #############################
