@@ -22,7 +22,7 @@ class Consttimer {
 		if(function_exists("bcadd")) {
 			return bcadd($a,$b,$c);
 		} else {
-			saveerror("bc-functions not availible. Inaccurately Parsetimes.");
+			#saveerror("bc-functions not availible. Inaccurately Parsetimes.");
 			return $a+$b;
 		}
 	}
@@ -30,7 +30,7 @@ class Consttimer {
 		if(function_exists("bcsub")) {
 			return bcsub($a,$b,$c);
 		} else {
-			saveerror("bc-functions not availible. Inaccurately Parsetimes.");
+			#saveerror("bc-functions not availible. Inaccurately Parsetimes.");
 			return $a-$b;
 		}
 	}
