@@ -1,0 +1,46 @@
+<center><table cellpadding=5 cellspacing=1 class="admin_table" width=450 border=0>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="forum_saveboard">
+<input type=hidden name="boardid" value="{_boardid_}">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font">Board/Kategorie Konfiguration</font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Kategorie</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font">
+		<select name="form[is_cat]">
+			<option value="1"{_ocat_}>Kategorie</option>
+			<option value="0"{_oboard_}>Board</option>
+		</select></font>
+	</td>
+ </tr>
+ <tr>
+
+	<td class="admin_td_left"><font class="admin_td_left_font">Eltern Kategorie</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><select name="form[parent_boardid]">
+			<option></option>
+			{_catlist_}
+			</select></font>
+	</td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board/Cat Name</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_name]" value="{_board[board_name]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board Passwort</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_password]" value="{_board[board_password]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board/Kategorie Kommentar</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_comment]" value="{_board[board_comment]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Sichtbar</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=checkbox value="1" name="form[visible]" {_vis_}></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><font class="admin_td_left_font"><input type=submit value="speichern"></font></td>
+ </tr>
+</table>

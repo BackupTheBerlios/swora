@@ -1,0 +1,27 @@
+<center>
+<table width=50% class="admin_table" cellpadding=5 cellspacing=1>
+<form action="{_thispath_}" method=post>
+<input type=hidden name="setupaction" value="install_module">
+ <tr>
+	<th align=left class="admin_th" colspan=2><font class="admin_th_font">Installation des Modules "Forum" &nbsp; &nbsp; &nbsp;<font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Tabellenname in der Datenbank (für Boards)</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[tablename_board]" value="swora_forum_boards"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Tabellenname in der Datenbank (für Beiträge)</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[tablename_post]" value="swora_forum_posts"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Tabellenname in der Datenbank (für Benachrichtigung)</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[tablename_notify]" value="swora_forum_notify"></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Alle Informationen diese Tabelle werden gelöscht!</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><input type=submit value="installieren"></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,77 @@
+<script language="javascript">
+function forum_set_code(a) {
+	document.forms["forum_form"].elements["form[text]"].value += a;
+}
+function forum_setsmilie(a) {
+	document.forms["forum_form"].elements["form[text]"].value += " |"+a+"| ";
+}
+//-->
+</script>
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method="post" name="forum_form">
+<input type=hidden name="action" value="{_actionsave_}">
+ <tr>
+	<th colspan=2 class="main_th" align=left><font class="main_th_font">{_th_title_}</font><font class="fail_text">&nbsp;&nbsp;&nbsp;&nbsp; {_fail_} </font></th>
+ </tr>
+
+ <tr>
+	<td width=100 class="main_td_left"><font class="main_td_left_font">Name:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_user_name_}</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Thema:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type="text" name="form[title]" value="{_form[title]_}"></font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Nachricht:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><textarea name="form[text]" cols=90 rows=20>{_form[text]_}</textarea></font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Smilies:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_smilies_}</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left" valign=top><font class="main_td_left_font">Codes:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<table cellspadding=0 cellespacing=0>
+		 <tr>
+			<td align=left><input type=button value="Fett" onclick="forum_set_code('[b]Fett[/b]')"></td>
+			<td align=left><input type=button value="Kursiv" onclick="forum_set_code('[i]Kursiv[/i]')"></td>
+			<td align=left><input type=button value="Unterstrichen" onclick="forum_set_code('[u]Unterstrichen[/u]')"></td>
+			<td align=left><input type=button value="Zentriert" onclick="forum_set_code('[center]zenitriert[/center]')"></td>
+			<td align=left><input type=button value="Schrift" onclick="forum_set_code('[font color=xxx size=xxx]Schrift[/font]')"></td>
+		 </tr>
+		 <tr>
+			<td align=left><input type=button value="Url" onclick="forum_set_code('[url]link[/url]')"></td>
+			<td align=left><input type=button value="Image" onclick="forum_set_code('[img width=300]ImagesUrl[/img]')"></td>
+			<td align=left><input type=button value="PHP-Code" onclick="forum_set_code('[code]CODE[/code]')"></td>
+			<td align=left><input type=button value="Email" onclick="forum_set_code('[email]Adresse[/email]')"></td>
+			<td align=left><input type=button value="Trennlinie" onclick="forum_set_code('[hr]')"></td>
+		 </tr>
+		</table>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font"></font></td>
+	<td class="main_td_right">
+		<table cellpadding=0 cellspacing=1 width=100%">
+		 <tr>
+			<td width=25><input type=checkbox value="1" name="form[smilies]" {_schecked_}></td>
+			<td><font class="main_td_right_font">Smilies aktivieren</font></td>
+		 </tr>
+		 <tr>
+			<td><input type=checkbox value="1" name="form[signatur]" checked></td>
+			<td><font class="main_td_right_font">Signatur an den Text anfügen</font></td>
+		 </tr>
+		 <tr>
+			<td><input type=checkbox value="1" name="form[notify]"{_notifybox_}></td>
+			<td><font class="main_td_right_font">Benachrichtigung bei neuem Beitrag</font></td>
+		 </tr>
+		</table>
+	</td>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_left" align=center><input type=submit value="abschicken" accesskey="a"></td>
+ </tr>
+</form>
+</table>

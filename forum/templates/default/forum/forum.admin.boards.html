@@ -1,0 +1,82 @@
+<script language="javascript">
+<!--
+	function changesort(value,id) {
+		document.forms['sortform'].elements['value'].value=value;
+		document.forms['sortform'].elements['id'].value=id;
+		document.forms['sortform'].submit();
+		//window.location='index.php?section=admin&adminaction=forum_boards_savesort&id='+id+'&value='+value;
+	}
+//-->
+</script>
+
+
+
+<form action="{_REQUEST_URI_}" method=post name="sortform">
+<input type=hidden name="adminaction" value="forum_boards_savesort">
+<input type=hidden name="id" value="">
+<input type=hidden name="value" value="">
+
+</form>
+
+<center><table cellpadding=5 cellspacing=1 class="forum_table" width=450>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="forum_deleteboard">
+ <tr>
+	<th class="admin_th" align=left colspan=5><font class="admin_th_font">Einstellungen der Boards</font></th>
+ </tr>
+
+{_inc[boards]_}
+
+ <tr>
+	<td colspan=5 align=center class="admin_td"><input type=submit value="löschen"></td>
+ </tr>
+</table>
+</form>
+<br><br>
+<br><br>
+
+
+<table cellpadding=5 cellspacing=1 class="admin_table" width=450>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="forum_newboard">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font">Neues Board/Kategorie</font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Kategorie</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font">
+		<select name="form[is_cat]">
+			<option value="1">Kategorie</option>
+			<option value="0">Board</option>
+		</select></font>
+	</td>
+ </tr>
+ <tr>
+
+	<td class="admin_td_left"><font class="admin_td_left_font">Eltern Kategorie</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><select name="form[parent_boardid]">
+			<option></option>
+			{_catlist_}
+			</select></font>
+	</td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board/Kategorie Name</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_name]"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board Passwort</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_password]"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Board/Kategorie Kommentar</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[board_comment]"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Sichtbar</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=checkbox value="1" name="form[visible]" checked></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><font class="admin_td_left_font"><input type=submit value="erstellen"></font></td>
+ </tr>
+</table>

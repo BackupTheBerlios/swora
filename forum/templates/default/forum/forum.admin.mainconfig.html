@@ -1,0 +1,27 @@
+<center><table cellpadding=5 cellspacing=1 class="admin_table" width=450>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="forum_save_mainconfig">
+ <tr>
+	<th class="admin_th" align=left colspan=3><font class="admin_th_font">Konfiguration</font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Anzahl der Themen pro Seite</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[forum_show_threadspp]" value="{_config[forum_show_threadspp]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Anzahl der Beiträge pro Seite</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[forum_show_postspp]" value="{_config[forum_show_postspp]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Gäste dürfen Beiträge erstellen ?</font></td>
+	<td class="admin_td_right">
+		<select name="form[forum_guestpost]">
+			<option value=1{_gpost[on]_}>Ja
+			<option value=0{_gpost[off]_}>Nein
+		</select>
+	</td>
+ <tr>
+	<td colspan=2 class="admin_td_left" align=center><font class="admin_td_left_font"><input type=submit value="speichern"></font></td>
+ </tr>
+</table>
