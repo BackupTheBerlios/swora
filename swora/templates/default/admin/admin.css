@@ -1,0 +1,55 @@
+body {
+	background-color:#e0e0e0;
+	font-family: Helvetica,Arial;
+	color:black;
+	font-size: 12px;
+	}
+
+.body { background-color:#e0e0e0;
+	font-family: verdana;
+	font-size: 11;color:black; }
+
+.fail_text { color:#00ff00;font-weight:bold;font-size:10 }
+
+input { background-color:#00aaff;border:1 solid; }
+textarea { background-color:#00aaff;border:1 solid; }
+select { background-color:#00aaff;border:1 solid; }
+hr { color:#00aaff; }
+
+a:link { color:black;text-decoration: none; font-size:11; }
+a:active { color:black;text-decoration: none }
+a:hover { color:black;text-decoration: underline; }
+a:visited { color:black;text-decoration: none }
+/* ################################################# */
+	.fail_text { color:red;font-size:10;font-weight:bold }
+	.main_trenn { background-color: black; }
+/* ################################################# */
+	.menu_th { background:url('/images/admin/th.gif') no-repeat bottom center;border:1 solid #888888;color:black; font-size:11 }
+	.menu_td { color: black; font-size:11 }
+
+	.menu_members_all { 		font-size:11;font_weight:bold;color:#00ff00; }
+	.menu_members_nonmembers { 	font-size:11;font_weight:bold;color:#0000ff; }
+	.menu_members_members { 	font-size:11;font_weight:bold;color:#ff0000; }
+/* ################################################# */
+	.admin_table {  }
+	.admin_th { background:url('/images/admin/th.gif') bottom center;border:1 solid #888888;color:black; font-size:11 }
+	.admin_th_font { font-size:10;color:black; }
+	.admin_td { background-color:0099dd; }
+	.admin_td_font { font-size:10 }
+	.admin_td_left { background-color: #bfbfbf }
+	.admin_td_left_font { font-size:10 }
+	.admin_td_right { background-color: #afafaf }
+	.admin_td_right_font { font-size:10 }
+	.admin_subaction_td { background-color:#0099bb; }
+
+/* ################################################# */
+	.sworaconfig_table {  }
+	.sworaconfig_th { background:url('/images/admin/th.gif') bottom center;border:1 solid #888888;color:black; font-size:11 }
+	.sworaconfig_th_font { font-size:11; color:black; }
+	.sworaconfig_td {  }
+	.sworaconfig_td_font { font-size:11; }
+	.sworaconfig_td_left { background-color: #bfbfbf }
+	.sworaconfig_td_left_font { font-size:10 }
+	.sworaconfig_td_right { background-color: #afafaf }
+	.sworaconfig_td_right_font { font-size:10 }
+/* ################################################# */

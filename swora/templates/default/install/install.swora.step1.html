@@ -1,0 +1,46 @@
+<table cellpadding=5 cellspacing=1 bgcolor=black>
+<form action="$REQUEST_URI" method=post>
+<input type=hidden name="checkstep" value="1">
+ <tr>
+	<th colspan=2 align=left>Verbindungsaufbau zur Datenbank</th>
+ </tr>
+ <tr>
+	<td colspan=2 class="td_top" width=600>
+		Um erfolgreich Verbindung zum SQL-Server herstellen zu können,
+		müssen Sie extakte Angaben über Host, Benutzer, Passwort
+		und den Namen der zu verwendenden Datenbank machen.
+	</td>
+ </tr>
+ <tr>
+	<td class="td_left" width=200>
+	<b>Host</b><br>
+	<font class="lower">Host der Datenbank (meist:LOCALHOST)</font>
+	</td>
+	<td class="td_right" width=200><input type=text name="form[host]" value="$form[host]" size=40></td>
+ </tr>
+ <tr>
+	<td class="td_leftb">
+	<b>UserName</b><br>
+	<font class="lower">Benutzername für die Datenbank</font>
+	</td>
+	<td class="td_rightb"><input type=text name="form[username]" value="$form[username]" size=40></td>
+ </tr>
+ <tr>
+	<td class="td_left">
+	<b>UserPasswort</b><br>
+	<font class="lower">BenutzerPasswort für die Datenbank</font>
+	</td>
+	<td class="td_right"><input type=password name="form[userpwd]" value="$form[userpwd]" size=40></td>
+ </tr>
+ <tr>
+	<td class="td_leftb">
+	<b>Datenabank</b><br>
+	<font class="lower">Name der zu benutzenden Datanbank</font>
+	</td>
+	<td class="td_rightb"><input type=text name="form[db]" value="$form[db]" size=40></td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="td_bottom"><input type=submit value="Verbindung testen"></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,68 @@
+<script language="javascript">
+<!--
+	function showuserpaths() {
+		if(!document.forms['uploadform'].elements['form[userid]'].value) {
+			alert("Sie müssen zuerst einen Benutzer auswählen.");
+		} else {
+			var userid = document.forms['uploadform'].elements['form[userid]'].value;
+			window.open("index.php?section=admin&adminaction=useruploader_showfolders&userid="+userid,"Folders","width=500,height=120,directories=no,status=no,scrollbars=yes,resize=no,menubar=no");
+		}
+	}
+//-->
+</script>
+<center>
+<table cellpadding=5 cellspacing=1 class="admin_table" width=50%>
+<form action="{_REQUEST_URI_}" method=post name="uploadform">
+<input type=hidden name="adminaction" value="useruploader_save">
+ <tr>
+	<th colspan=2 class="admin_th" align=left><font class="admin_th_font">Konfiguration</font></th>
+ </tr>
+ <tr>
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Benutzer auswählen</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="admin_td_right" align=center>
+		<select size=20 name="form[userid]">
+{_userbits_}
+		</select><br>
+		<font class="admin_td_right_font">
+			<font style="background-color:00ff00">Kann Uploaden</font>
+			<font style="background-color:ff0000">Kann <b>nicht</b> Uploaden</font>
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Zugriff verwalten</font></td>
+ </tr>
+	<td colspan=2 align=center class="admin_td_right"><font class="admin_td_right_font">
+		<input type=submit name="form[upload_allow]" value="Upload erlauben">
+		<input type=submit name="form[upload_disallow]" value="Upload verbieten">
+	</font></td>
+ <tr>
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Neuen Ordner Freigeben &nbsp; &nbsp; &nbsp; <font class="fail_text">{_fail_}</font></font></td>
+ </tr>
+ <tr>
+	<td align=right class="admin_td_right"><font class="admin_td_right_font">
+		ServerId: 
+		<select name="form[ftpid]">
+{_ftplist_}
+		</select><br>
+
+		Pfad für diese <a href="index.php?section=admin&adminaction=ftps">FtpId</a>: 
+		<input type=text name="form[upload_paths]" size=20 value="/">
+	</font></td>
+	<td align=center class="admin_td_left"><font class="admin_td_left_font">
+		<input type=submit name="form[newfree]" value="freigeben">
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Benutzerpfade verwalten ...</font></td>
+ </tr>
+
+ <tr>
+	<td colspan=2 align=center class="admin_td_right"><font class="admin_td_right_font">
+		<input type=button value="... Ordner" onclick="showuserpaths()">
+	</font></td>
+ </tr>
+</form>
+</table>

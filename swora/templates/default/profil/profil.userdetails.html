@@ -1,0 +1,93 @@
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="profil">
+<input type=hidden name="action" value="saveuserdetails">
+{_session_form_}
+<table cellpadding="5" cellspacing="1" width=100% class="main_table" border=0>
+ <tr>
+	<th colspan=3 class="main_th" align=left><font class="main_th_font">Anmeldung<font class="fail_text">&nbsp;&nbsp;{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td width=25% class="main_td_left"><font class="main_td_left_font">Benutzername:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_login[user_login]_}</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Name: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[user_name]" value="{_login[user_name]_}">&nbsp; &nbsp; &nbsp; (Plichtfeld)</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Wohnort:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[user_location]" value="{_login[user_location]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">eMail</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_email]" value="{_login[user_email]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">ICQ: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_icq]" value="{_login[user_icq]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">AIM: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_aim]" value="{_login[user_aim]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Yim: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_yim]" value="{_login[user_yim]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Homepage: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_hp]" value="{_login[user_hp]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Arbeit:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_work]" value="{_login[user_work]_}" size=40>
+	</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_right"><font class="main_td_right_font">Interessen: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<textarea name="form[user_interests]" cols=40 rows=5>{_login[user_interests]_}</textarea>
+	</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Bemerkungen: </font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<textarea name="form[user_text]" cols=40 rows=5>{_login[user_text]_}</textarea>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Geburtstag:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[birthday]" value="{_birthday_}" size=2>
+		<input type=text name="form[birthmonth]" value="{_birthmonth_}" size=2>
+		<input type=text name="form[birthyear]" value="{_birthyear_}" maxlength=4 size=5>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Geschlecht:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<select name="form[user_gender]">
+			<option></option>
+			<option value="1"{_male_}>männlich</option>
+			<option value="2"{_female_}>weiblich</option>
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right" colspan=2 align=center>
+		<input type=submit value="speichern">
+	</td>
+ </tr>
+</table>
+</form>

@@ -1,0 +1,32 @@
+	 <tr>
+		<td class="main_td_left" colspan=6><font class="main_td_left_font">
+			<table cellpadding=0 cellspacing=0 width=100%>
+			<form action="{_REQUEST_URI_}" method=post>
+			 <tr>
+				<td align=left><font class="main_td_left_font">
+					Zeige:<select name="show">
+						<option value=5{_param[s5]_}>5
+						<option value=10{_param[s10]_}>10
+						<option value=15{_param[s15]_}>15
+						<option value=25{_param[s25]_}>25
+						<option value=50{_param[s50]_}>50
+					</select>
+					sortiert nach:<select name="order">
+						<option value="user_name"{_param[user_name]_}>Name
+						<option value="user_hp"{_param[user_hp]_}>Homepage
+						<option value="user_icq"{_param[user_icq]_}>ICQ
+						<option value="points"{_param[points]_}>Punkte
+					</select>
+					<select name="sort">
+						<option value="DESC"{_param[DESC]_}>abnehmend
+						<option value="ASC"{_param[ASC]_}>zunehmend
+					</select>
+					<input type=submit value="go">
+				</font></td>
+				<td align=right><font class="main_td_left_font"> {_links_} </font></td>
+			 </tr>
+			</form>
+			</table>
+			</font>
+		</td>
+	 </tr>

@@ -1,0 +1,42 @@
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method=post enctype="multipart/form-data">
+<input type=hidden name="action" value="save_avatar">
+ <tr>
+	<th colspan=3 align=left class="main_th"><font class="main_th_font">Avatar</font><font class="fail_text">&nbsp;&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td class="main_td_left">
+		<font class="main_td_left_font">» <b>Upload</b> <br> 
+			<font class="main_td_bottom_font"> Laden Sie ihren eigenen Avatar auf unseren Server</font>
+		</font>
+	</td>
+	<td class="main_td_right"><input type=file name="avatarpic"></td>
+ </tr>
+ <tr>
+	<td class="main_td_right">
+		<font class="main_td_right_font">» <b>Link</b> <br> 
+			<font class="main_td_bottom_font"> Geben sie einen Pfad zu ihrem Bld an (optional)</font>
+		</font>
+	</td>
+	<td class="main_td_right"><input type=text name="form[link]"></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left">
+		<font class="main_td_left_font">» <b>Avatar löschen</b> <br> 
+			<font class="main_td_bottom_font"> Löschen Sie ihren aktuellen Avatar </font>
+		</font>
+	</td>
+	<td class="main_td_right">{_avatarpic_}<input type=checkbox value="1" name="form[unlink]"></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_right">
+		<font class="main_td_bottom_font"> *Die Avatar Größe darf <b>{_size_}</b> Kb nicht überschreiten. <br> 
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_left" align=center><input type=submit value="speichern"></td>
+ </tr>
+</table>
+
+</form>

@@ -1,0 +1,41 @@
+<center>
+<script language="javascript" src="md5.js"></script>
+<script language="javascript">
+<!--
+function dologin() {
+	document.forms["submitthis"].elements["loginform[username]"].value 	= document.forms.entered.elements.username.value
+	document.forms["submitthis"].elements["loginform[userpassword]"].value = calcMD5(document.forms.entered.elements.userpwd.value)
+	document.forms["submitthis"].elements["loginform[md5]"].value		= "1";
+	document.forms["submitthis"].submit();
+}
+//-->
+</script>
+<form action="{_REQUEST_URI_}" method=post name="submitthis">
+<input type=hidden name="logout" value="0">
+<input type=hidden name="dothelogin" value="1">
+<input type=hidden name="loginform[username]" value="">
+<input type=hidden name="loginform[userpassword]" value="">
+<input type=hidden name="loginform[md5]" value="">
+<input type=hidden name="stopheaderoutput_main" value="{_stopheaderoutput_main_}">
+{_session_form_}
+</form>
+
+<table cellpadding=5 width=40% cellspacing=1 class="login_table">
+<form name="entered">
+ <tr>
+	<th align=left colspan=2 class="login_th"><font class="login_th_font">Login</font></th>
+ </tr>
+ <tr>
+	<td class="login_td_left"><font class="login_td_left_font">Benutzername:</font></td>
+	<td class="login_td_left"><font class="login_td_left_font">Benutzerpasswort:</font></td>
+ </tr>
+ <tr>
+	<td class="login_td_right"><font class="login_td_right_font"><input tabindex=90 type=text name="username" value="{_loginform[username]_}"></font></td>
+	<td class="login_td_right"><font class="login_td_right_font"><input tabindex=91 type=password name="userpwd" value=""></font></td>
+ </tr>
+ <tr>
+	<td class="login_td_left" align=center><font class="login_td_left_font"><a href="index.php?section=user&action=forgotnpasswordstep1">Passwort<br>vergessen</a></font></td>
+	<td align=center class="login_td_left"><font class="login_td_left_font"><input tabindex=92 type=button onclick="dologin();return false;" value=":: Login"></font></td>
+ </tr>
+</form>
+</table>                                          

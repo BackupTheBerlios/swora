@@ -1,0 +1,43 @@
+<center>
+
+
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=400>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="save_smilies">
+
+ <tr>
+	<th colspan=2 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.smilies.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Neues Smilie einbinden</font><font class="fail_text">&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Pfad in 'images/smilies':</font></td>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font"><input type=text name="form[sfile]"></font></td>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Zu übersetztender Text:</font></td>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font"><input type=text name="form[stext]"></font></td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="sworaconfig_td_left"><font class="sworaconfig_td_font"><input type="submit" value="speichern"></font></td>
+ </tr>
+</form>
+</table>
+
+<br><br>
+
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=450>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="delete_smilies">
+
+ <tr>
+	<th colspan=4 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.smilies');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Smilies</font></th>
+ </tr>
+
+	{_setsmilies_}
+
+ <tr>
+	<td colspan=4 align=center class="sworaconfig_td_left"><input type=submit value="Auswahl löschen"></th>
+ </tr>
+</form>
+</table>

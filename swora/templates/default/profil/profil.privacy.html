@@ -1,0 +1,26 @@
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="profil">
+<input type=hidden name="action" value="save_privacy">
+ <tr>
+	<th colspan=2 align=left class="main_th"><font class="main_th_font">Sicherheit</font><font class="fail_text">&nbsp;&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">» <b>eMailadresse anzeigen</b> <br> <font class="main_td_left_font_comment"> Unterscheidet, ob ihre Email angezeigt wird, oder eine Email nur mit unserem <a href="index.php?section=contact&who=user&userid={_login[id]_}">Mailer</a> verschickt weden kann </font> </font></td>
+	<td class="main_td_right"><input type=checkbox value="1" name="form[show_email]"{_show_email_}></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">» <b>NewsLetter</b> <br> <font class="main_td_left_font_comment"> Gestatten Sie uns Newsletter an Sie schicken zu dürfen. </font> </font></td>
+	<td class="main_td_right"><input type=checkbox value="1" name="form[newsletter]"{_newsletter_}></td>
+ </tr>
+
+
+{_addons_}
+
+
+ <tr>
+	<td colspan=2 class="main_td_right" align=center><input type=submit value="Speichern"></td>
+ </tr>
+</table>
+
+</form>

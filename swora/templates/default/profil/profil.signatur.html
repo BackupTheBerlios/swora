@@ -1,0 +1,54 @@
+<script language="javascript">
+<!--
+function sig_set_code(a) {
+	document.forms["profil_form"].elements["form[user_signatur]"].value += a;
+}
+function sig_setsmilie(a) {
+	document.forms["profil_form"].elements["form[user_signatur]"].value += " |"+a+"| ";
+}
+//-->
+</script>
+
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method=post name="profil_form">
+<input type=hidden name="section" value="profil">
+<input type=hidden name="action" value="save_signatur">
+ <tr>
+	<th colspan=2 align=left class="main_th"><font class="main_th_font">Signatur &nbsp;&nbsp;&nbsp;&nbsp;<font class="fail_text"> {_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_left" align=center>
+		<textarea name="form[user_signatur]" cols=60 rows=10>{_login[user_signatur]_}</textarea>
+	</td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Codes:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<table cellspadding=0 cellespacing=0>
+		 <tr>
+			<td align=left><input type=button value="Fett" onclick="sig_set_code('[b]Fett[/b]')"></td>
+			<td align=left><input type=button value="Kursiv" onclick="sig_set_code('[i]Kursiv[/i]')"></td>
+			<td align=left><input type=button value="Unterstrichen" onclick="sig_set_code('[u]Unterstrichen[/u]')"></td>
+			<td align=left><input type=button value="Zentriert" onclick="sig_set_code('[center]zenitriert[/center]')"></td>
+			<td align=left><input type=button value="Schrift" onclick="sig_set_code('[font color=xxx size=xxx]Schrift[/font]')"></td>
+		 </tr>
+		 <tr>
+			<td align=left><input type=button value="Url" onclick="sig_set_code('[url]link[/url]')"></td>
+			<td align=left><input type=button value="Image" onclick="sig_set_code('[img width=300]ImagesUrl[/img]')"></td>
+			<td align=left><input type=button value="PHP-Code" onclick="sig_set_code('[code]CODE[/code]')"></td>
+			<td align=left><input type=button value="Email" onclick="sig_set_code('[email]Adresse[/email]')"></td>
+			<td align=left><input type=button value="Trennlinie" onclick="sig_set_code('[hr]')"></td>
+		 </tr>
+		</table>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Smilies</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_smilies_}</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="main_td_left"><input type=submit value="speichern"></td>
+ </tr>
+</table>
+
+</form>

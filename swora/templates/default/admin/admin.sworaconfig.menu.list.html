@@ -1,0 +1,111 @@
+<script language="javascript">
+<!--
+	function savelinksort(id,sort) {
+		document.forms['sortform'].elements['form[lid]'].value=id;
+		document.forms['sortform'].elements['form[sort]'].value=sort;
+		document.forms['sortform'].submit();
+	}
+//-->
+</script>
+<center>
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=600>
+<form action="{_REQUEST_URI_}" method=post name="sortform">
+<input type=hidden name="adminaction" value="save_menu_sort">
+<input type=hidden name="form[lid]" value="">
+<input type=hidden name="form[sort]" value="">
+</form>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="link_delete">
+{_session_form_}
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.menu');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Menu</font><font class="fail_text">&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+
+ <tr valign=top>
+	<td colspan=2 align=center class="sworaconfig_td_right">
+		<font class="sworaconfig_td_right_font">
+			<table width=100% cellpadding=0 cellsapcing=0 width=50%>
+				{_inc[top]_}
+			</table>
+		</font>
+	</td>
+ </tr>
+
+ <tr valign=top>
+	<td class="sworaconfig_td_left">
+		<font class="sworaconfig_th_font">
+			<table width=100% cellpadding=0 cellsapcing=0>
+				{_inc[left]_}
+			</table>
+		</font>
+	</td>
+
+	<td class="sworaconfig_td_right">
+		<font class="sworaconfig_th_font">
+			<table width=100% cellpadding=0 cellsapcing=0>
+				{_inc[right]_}
+			</table>
+		</font>
+	</td>
+ </tr>
+
+ <tr valign=top>
+	<td colspan=2 align=center class="sworaconfig_td_left">
+		<font class="sworaconfig_td_left_font">
+			<table width=100% cellpadding=0 cellsapcing=0 width=50%>
+				{_inc[bottom]_}
+			</table>
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_right" colspan=2 align=center>
+	<input type=submit name="form[delete]" value="löschen">
+	</td>
+ </tr>
+</form>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="save_menu_enabled">
+ <tr>
+	<td class="sworaconfig_td_left" colspan=2>
+		<table cellpadding=0 cellspacing=0 width=100%>
+		 <tr>
+			<td>
+				<table cellpadding=0 cellspacing=2>
+				 <tr>
+					<td><input type=radio name="form[e_menu]" value="0"{_emenuselectoff_}></td>
+					<td><font class="sworaconfig_td_font">Menu deaktivieren</font></td>
+				 </tr>
+				 <tr>
+					<td><input type=radio name="form[e_menu]" value="1"{_emenuselecton_}></td>
+					<td><font class="sworaconfig_td_font">Menu aktivieren</font></td>
+				 </tr>
+				</table>
+			</td>
+			<td align=right>
+				<table cellpadding=0 cellspacing=3>
+				 <tr>
+					<td class="menu_members_all">X</td>
+					<td><font class="sworaconfig_td_font">Für alle sichtbar</font></td>
+				 </tr>
+				 <tr>
+					<td class="menu_members_nonmembers">X</font></td>
+					<td><font class="sworaconfig_td_font">Nicht für Mitglieder sichtbar</td>
+				 </tr>
+				 <tr>
+					<td class="menu_members_members">X</font></td>
+					<td><font class="sworaconfig_td_font">Nur für Mitglieder sichtbar</td>
+				 </tr>
+				</table>
+			</td>
+		 </tr>
+		</table>
+	</td>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_right" colspan=2 align=center>
+	<input type=submit value=" speichern ">
+	</td>
+ </tr>
+</form>
+</table>

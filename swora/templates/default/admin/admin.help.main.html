@@ -1,0 +1,35 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="admin_table" width=100%>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="help_delete">
+ <tr>
+	<th colspan=5 class="admin_th" align=left><font class="admin_th_font"><a href="#" onclick="open_help('admin.modules.swora.help');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Hilfe</font></th>
+ </tr>
+{_helpbits_}
+ <tr>
+	<td colspan=5 align=center class="admin_td_right"><font class="admin_td_right_font"><input type=submit value="löschen"></font></td>
+ </tr>
+</form>
+</table>
+
+<br><br><br>
+
+<table cellpadding=5 cellspacing=1 class="admin_table" width=100%>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="help_new">
+ <tr>
+	<th colspan=2 class="admin_th" align=left><font class="admin_th_font"><a href="#" onclick="open_help('admin.modules.swora.help.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: neue Hilfe</font> &nbsp;&nbsp;&nbsp;<font class="fail_text">{_fail_}<font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Name:</font></td>
+	<td class="admin_td_right" width=80%><font class="admin_td_right_font"><input type=text name="form[name]"value="{_form[name]_}" maxlength=255></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left" valign=top><font class="admin_td_left_font">Text:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><textarea cols=80 name="form[text]" rows=15>{_form[text]_}</textarea></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><font class="admin_td_left_font"><input type=submit value=" OK "></font></td>
+ </tr>
+</form>
+</table>

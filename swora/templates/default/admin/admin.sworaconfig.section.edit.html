@@ -1,0 +1,23 @@
+<center>
+
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=400>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="save_edit_section">
+<input type=hidden name="secid" value="{_secid_}">
+ <tr>
+	<th colspan=2 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">Modul ändern</font><font class="fail_text">&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Folder in 'sections/':</font></td>
+	<td class="sworaconfig_td_right"><font class="sworaconfig_td_font"><input type=text name="form[title]" value="{_section[title]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Beschreibung:</font></td>
+	<td class="sworaconfig_td_right"><font class="sworaconfig_td_font"><input type=text name="form[name]" value="{_section[name]_}"></font></td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="sworaconfig_td_left"><font class="sworaconfig_td_font"><input type="submit" value="speichern"></font></td>
+ </tr>
+</form>
+</table>

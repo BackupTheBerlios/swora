@@ -1,0 +1,33 @@
+<center>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="blockinactiv_save">
+<table cellpadding="5" cellspacing="1" width=450 class="admin_table" border=0>
+ <tr>
+	<th colspan=5 class="admin_th" align=left><font class="admin_th_font">Benutzer</font></th>
+ </tr>
+{_inc[users]_}
+</table>
+</form>
+<br><br>
+
+
+
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="new_blockinactivate_save">
+<table cellpadding="5" cellspacing="1" width=400 class="" border=0>
+ <tr>
+	<th colspan=2 class="admin_th" align=left><font class="admin_th_font">Account blockieren &nbsp;&nbsp;&nbsp; <font class="fail_text"> {_fail_} </font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td"><font class="admin_td_font">
+		Benutzer Id</font>
+	</td>
+	<td class="admin_td">
+		<input type=text name="form[userid]">
+	</td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td"><input type=submit name="blockate" value="blockieren"></td>
+ </tr>
+</table>
+</form>

@@ -1,0 +1,44 @@
+<center>
+<table cellpadding=5 width=40% cellspacing=1 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post name="selectinglimit">
+<input type=hidden name="adminaction" value="limittraffic_edit_save">
+<input type=hidden name="lid" value="{_lid_}">
+ </tr>
+	<th class="admin_th" colspan=2 align=left><font class="admin_th_font">Beschränkung ändern <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Beschränken bei mehr als:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text size=5 name="form[size]" value="{_re[1]_}">
+		<select name="form[sizeb]">
+			<option value="1">Byte
+			<option value="1024">KiloByte
+			<option value="1048576">MegaByte
+			<option value="1073741824">GigaByte
+			<option value="1099511627776">TerraByte
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Beschränken für:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text size=5 name="form[time]" value="{_re[2]_}">
+		<select name="form[timeb]">
+			<option value="day"{_select[day]_}>Tage
+			<option value="week"{_select[week]_}>Wochen
+			<option value="month"{_select[month]_}>Monate
+			<option value="year"{_select[year]_}>Jahre
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td valign=top class="admin_td_left"><font class="admin_td_left_font">zu schliessende Module:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font">
+		<select name="form[section]">
+			<option value="0"{_allselected_}>---- ganze Seite -----
+			{_sectionbits_}
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><input type=submit value="ändern"></td>
+ </tr>
+</table>

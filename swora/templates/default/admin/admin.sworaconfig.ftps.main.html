@@ -1,0 +1,52 @@
+<center>
+
+<table cellpadding=5 cellspacing=1 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="delete_ftp">
+ <tr>
+	<th colspan=6 align=left class="admin_th"><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.ftp');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Ftp-Accounts</font></th>
+ </tr>
+{_ftplist_}
+ <tr>
+	<td class="admin_td_left" colspan=6 align=center><input type=submit value="Auswahl löschen"></td>
+ </tr>
+</form>
+</table>
+
+<br><br>
+
+<table cellpadding=5 cellspacing=1 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="save_ftp">
+ <tr>
+	<th align=left colspan=2 class="admin_th"><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.ftp.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Neuer Ftp &nbsp; &nbsp; <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Titel:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[title]" value="{_form[title]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Adresse:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[host]" value="{_form[host]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Port:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[port]" value="{_form[port]_}" size=7 maxlength=7></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Benutzername:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[user]" value="{_form[user]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Benutzerpasswort:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=password name="form[pwd]" value="{_form[pwd]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Pfad:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[path]" value="{_form[path]_}"></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><input type=submit value=" OK "></td>
+ </tr>
+</form>
+</table>

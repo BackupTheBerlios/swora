@@ -1,0 +1,74 @@
+<center><form action="{_REQUEST_URI_}" method=post name="rightform">
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="rights_save">
+{_session_form_}
+<table cellpadding="5" cellspacing="1" width=400 class="admin_table" border=0>
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font">Rechte</font><font class="fail_text">&nbsp;&nbsp;&nbsp;{_fail_}</font></th>
+ </tr>
+
+ <tr>
+	<td width=25% class="admin_td_right"><font class="admin_td_right_font">Benutzer:</font></td>
+	<td class="admin_td_left">
+		<font class="user_form_td_left_font">
+			<select name="form[userid]">
+			{_users_}
+			</select>
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td class="admin_td_right"><font class="admin_td_right_font">Modul:</font></td>
+	<td class="admin_td_left">
+		<font class="admin_td_left_font">
+			<select name="form[sectionid]">
+			{_sections_}
+			</select>
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td class="admin_td_right"><font class="admin_td_right_font">Boar ID <font size=1>(if Sektion=="Board")</font>:</font></td>
+	<td class="admin_td_left">
+		<font class="admin_td_left_font">
+			<select name="form[boardid]">
+			<option></option>
+			<option value="0">-- ALL BOARDS --</option>
+			{_boards_}
+			</select>
+		</font>
+	</td>
+ </tr>
+
+ <tr>
+	<td class="admin_td_right"><font class="admin_td_right_font">globaler Administrator:</font></td>
+	<td class="admin_td_left">
+		<font class="admin_td_left_font">
+			<input type=checkbox name=form[is_admin]>
+		</font>
+	</td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="admin_td_left"><input type="submit" value="erzeugen"></td>
+ <tr>
+</form>
+</table>
+
+<br><br>
+
+<form action="{_REQUEST_URI_}" method="post">
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="rights_delete">
+<table cellpadding="5" cellspacing="1" width=450 border=0>
+ <tr>
+	<th colspan=2 class="admin_th" align=left><font class="admin_th_font"> Benutzername </font></th>
+	<th class="admin_th" align=left><font class="admin_th_font"> Modul </font></th>
+	<th class="admin_th" align=left><font class="admin_th_font"> Board </font></th>
+	<th class="admin_th" align=left><font class="admin_th_font"> Adminrechte </font></th>
+ </tr>
+{_moderators_}
+ <tr>
+	<td colspan=5 align=center class="admin_td_left"><input type=submit value="löschen"></td>
+ </tr>
+</form>
+</table>

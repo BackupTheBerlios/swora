@@ -1,0 +1,31 @@
+<table cellpadding=5 cellspacing=1 class="main_table" width=100%>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="action" value="sendtomail">
+<input type=hidden name="mi" value="{_mi_}">
+ <tr>
+	<th colspan=2 class="main_th" align=left><font class="main_th_font">Kontaktieren Sie Uns</font><font class="fail_text">&nbsp;&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td width=15% class="main_td_left"><font class="main_td_left_font">Empänger:</td>
+	<td class="main_td_right"><font class="main_td_right_font">{_user_name_} {_user_email_}</td>
+ </tr>
+ <tr>
+	<td width=15% class="main_td_left"><font class="main_td_left_font">Ihr Name:</td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[name]" value="{_form[name]_}" size=50></td>
+ </tr>
+ <tr>
+	<td width=15% class="main_td_left"><font class="main_td_left_font">Ihre Emailadresse:</td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[email]" value="{_form[email]_}" size=50></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Betreff:</td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[subject]" value="{_form[subject]_}" size=50></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Text</td>
+	<td class="main_td_right"><font class="main_td_right_font"><textarea name="form[text]" cols=50 rows=15>{_form[text]_}</textarea></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_left" align=center><input type=submit value="Abschicken"></td>
+ </tr></font>
+</table>

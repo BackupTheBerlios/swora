@@ -1,0 +1,193 @@
+<center>
+<script language="javascript">
+<!--
+	function setdirinputs(value) {
+		document.forms['newdir'].elements['form[basedir]'].value=value;
+		document.forms['newfile'].elements['form[basedir]'].value=value;
+		document.forms['deldir'].elements['form[deldir]'].value=value;
+		document.forms['renamefile'].elements['form[basedir]'].value=value;
+		document.forms['goto'].elements['goto'].value=value;
+	}
+	function setfileinputs(value) {
+		if(value==-1) return 1;
+
+		var filename;
+		filename = value.split("/");
+		filename = filename[filename.length-1];
+		document.forms['renamefile'].elements['form[renamefile]'].value	=	filename;
+		document.forms['renamefile'].elements['form[basefile]'].value	=	filename;
+		document.forms['delfile'].elements['form[delfile]'].value	=	filename;
+
+
+		document.forms['paths'].elements['pathdirect'].value		= 	value;
+
+	}
+	function changeloaction() {
+		location.href='index.php?section=uploader&serverid={_serverid_}&setid={_setid_}&spath='+document.forms['goto'].elements['goto'].value;
+
+	}
+	function setdelform(value) {
+
+	}
+//-->
+</script>
+
+<table cellpadding=5 cellspacing=1 width=50% class="main_table">
+<! ----------------------------------------------------------------------------------- //-->
+ <tr>
+	<th colspan=2 align=left class="main_th"><font class="main_th_font">Ftp-Manager</font></th>
+ </tr>
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">
+	aktuelles Verzeichnis:
+	<hr>
+	<b>{_pwd_}</b>
+	<hr>
+	</font></th>
+ </tr>
+<! ######################################################################################## //-->
+<form name="goto">
+<input type=hidden name="goto" value="{_pwd_}">
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">Ordner</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="main_td_right"><font class="main_td_right_font">
+		<select name="form[dir]" size=10 onchange="setdirinputs(this.value);">
+{_folderfiles[0]_}
+		</select>
+	</font><br>
+	<input type=button value="Dateien auslesen" onclick="changeloaction()">
+	</td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">Dateien</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="main_td_right"><font class="main_td_right_font">
+		<select name="form[file]" size=10 onchange="setfileinputs(this.value);">
+{_folderfiles[1]_}
+		</select>
+	</font></td>
+ </tr>
+
+<! ######################################################################################## //-->
+<form action="{_REQUEST_URI_}" method=post name="newdir">
+<input type=hidden name="action" value="new_dir">
+<input type=hidden name="setid" value="{_setid_}">
+<input type=hidden name="serverid" value="{_serverid_}">
+<input type=hidden name="form[basedir]" value="{_pwd_}">
+ <tr>
+	<td colspan=2 align=left class="main_td_left"><font class="main_td_left_font">
+		Neues Verzeichnis: <font class="fail_text">{_fail_newdir_}</font>
+	</font></td>
+ </tr>
+ <tr>
+	<td align=center class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[newdir]" size=42>
+	</font></td>
+	<td align=center class="main_td_left"><input type=submit name="newdir" value="erstellen"></td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+<form action="{_REQUEST_URI_}" method=post enctype="multipart/form-data" name="newfile">
+<input type=hidden name="action" value="new_file">
+<input type=hidden name="setid" value="{_setid_}">
+<input type=hidden name="serverid" value="{_serverid_}">
+<input type=hidden name="form[basedir]" value="{_pwd_}">
+ <tr>
+	<td colspan=2 align=left class="main_td_left"><font class="main_td_left_font">
+		Datei hochladen: <font class="fail_text">{_fail_newfile_}</font>
+	</font></td>
+ </tr>
+ <tr>
+	<td align=center class="main_td_right"><font class="main_td_right_font">
+		<input type=file name="upfile">
+	</font></td>
+	<td align=center class="main_td_left"><input type=submit name="newfile" value="Upload"></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=left class="main_td_left"><font class="main_td_left_font">
+		Bestehende Datei überschreiben ?
+	</font></td>
+ </tr>
+ <tr valign=center>
+	<td colspan=2 align=center class="main_td_right"><font class="main_td_right_font">
+		Ja: <input type=radio name="form[overwrite]" value=1>
+		&nbsp; &nbsp; &nbsp; &nbsp;
+		Nein: <input type=radio name="form[overwrite]" value=0 checked>
+	</font></td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+<form action="{_REQUEST_URI_}" method=post name="deldir">
+<input type=hidden name="action" value="del_dir">
+<input type=hidden name="setid" value="{_setid_}">
+<input type=hidden name="serverid" value="{_serverid_}">
+ <tr>
+	<td colspan=2 align=left class="main_td_left"><font class="main_td_left_font">
+		Verzeichnis löschen: <b>(!! Sämlicher Inhalt geht dabei verloren !!)</b> <font class="fail_text">{_fail_delfile_}</font>
+	</font></td>
+ </tr>
+ <tr valign=center>
+	<td align=center class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[deldir]" size=42 readonly>
+	</font></td>
+	<td align=center class="main_td_left">
+		<input type=submit name="deldir" value="löschen">
+	</td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+<form action="{_REQUEST_URI_}" method=post name="renamefile">
+<input type=hidden name="action" value="rename_file">
+<input type=hidden name="serverid" value="{_serverid_}">
+<input type=hidden name="setid" value="{_setid_}">
+<input type=hidden name="form[basedir]" value="{_pwd_}">
+<input type=hidden name="form[basefile]" value="">
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">Umbenennen <font class="fail_text">{_fail_mvfile_}</font></font></td>
+ </tr>
+ <tr>
+	<td align=center class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[renamefile]">
+	</font></td>
+	<td align=center class="main_td_left"><font class="main_td_left_font">
+		<input type=submit name="renamefile" value="speichern">
+	</font></td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+<form action="{_REQUEST_URI_}" method=post name="delfile">
+<input type=hidden name="action" value="del_file">
+<input type=hidden name="setid" value="{_setid_}">
+<input type=hidden name="serverid" value="{_serverid_}">
+<input type=hidden name="form[basedir]" value="{_pwd_}">
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">Löschen</font></td>
+ </tr>
+ <tr>
+	<td align=center class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[delfile]" readonly>
+	</font></td>
+	<td align=center class="main_td_left"><font class="main_td_left_font">
+		<input type=submit name="delfile" value="löschen">
+	</font></td>
+ </tr>
+</form>
+<! ######################################################################################## //-->
+<form name="paths">
+ <tr>
+	<td colspan=2 class="main_td_left"><font class="main_td_left_font">Ort</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="main_td_left"><font class="main_td_left_font">
+		<input type=text name="pathdirect" size=40>
+	</font></td>
+ </tr>
+</form>
+</table>
+
+</center>

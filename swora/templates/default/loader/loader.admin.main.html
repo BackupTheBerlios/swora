@@ -1,0 +1,103 @@
+<center>
+<table cellpadding=5 cellspacing=1 width=550 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="loader_add">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font"> Link hinzufügen &nbsp; &nbsp; <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Titel:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[title]"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Ziel bzw. Datei:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[file]"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">fungiert als:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font">
+		<select name="form[mode]">
+		<option value=1>Weiterleitung</option>
+		<option value=2>Datei auf diesem Server</option>
+		<option value=3>Datei auf einem fremden Server</option>
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><font class="admin_td_left_font">Link: index.php?section=loader&cat={TITEL}</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><font class="admin_td_left_font">
+
+		<center>-------------------</center>
+		<b>Eine Weiterleitung kann nur auf einen Weg erfolgen:</b><br>
+		Hervorragen geiegnet um eine Link zu einem Partner anzubringen und dessen Klicks zu zählen.
+		<table width=100%><tr><td width=25%></td><td><font class="admin_td_left_font">
+		- UrlAngabe (bitte http:// bzw ftp:// <u>nicht</u> vergessen)
+		</font></td></tr></table>
+
+		<center>-------------------</center>
+		<b>Befindet sich die Datei auf diesem Server, so gibt es zweit Möglichkeiten diese einzubinden</b><br>
+		Beste Arte reine Text/HTML Dokumente zu laden
+		<table width=100%><tr><td width=25%></td><td><font class="admin_td_left_font">
+		- PfadAngabe (/www/web02/..)<br>
+		- relative Pfadangabe (../../files/)<br>
+		</font></td></tr></table>
+
+		<center>-------------------</center>
+		<b>Befindet sich die Datei auf einem fremden Server, so müssen Sie wie folgt vorgehen</b><br>
+		Diese Variante ist hervoragend dafür geeigent, um eigene Skripte ausfürhen zu lassen.
+		<table width=100%><tr><td width=25%></td><td><font class="admin_td_left_font">
+		- UrlAngabe (bitte http:// bzw ftp:// <u>nicht</u> vergessen)
+		</font></td></tr></table>
+
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_right"><input type=submit value="erstellen"></td>
+ </tr>
+</form>
+
+</table>
+
+<br><br>
+
+<table cellpadding=5 cellspacing=1 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="loader_delete">
+ <tr>
+	<th align=left class="admin_th"><font class="admin_th_font"> - </font></th>
+	<th align=left class="admin_th"><font class="admin_th_font"> Title </font></th>
+	<th align=left class="admin_th"><font class="admin_th_font"> File </font></th>
+	<th align=left class="admin_th"><font class="admin_th_font"> Klicks </font></th>
+	<th align=left class="admin_th"><font class="admin_th_font"> fungiert als </font></th>
+	<th align=left class="admin_th"><font class="admin_th_font"> Link </font></th>
+ </tr>
+{_loadbits_}
+ <tr>
+	<td align=center class="admin_td_right" colspan=2><input type=submit value="löschen"></td>
+	<td colspan=4 class="admin_td_left">
+		<table class="admin_table" width=100% cellpadding=0 cellspacing=0>
+		<form action="{_REQUEST_URI_}" method=post>
+		 <tr>
+			<td><font class="admin_td_left_font">
+				<select name="order">
+					<option value="title">Titel
+					<option value="file">File
+					<option value="loads">Klicks
+					<option value="mode">Funktion
+				</select>
+				<select name="sort">
+					<option value="asc">aufsteigend
+					<option value="desc">absteigend
+				</select>
+				<input type=submit value="go">
+			</font></td>
+			<td align=right><font class="admin_td_left_font">{_pages_}</font></td>
+		 </tr>
+		</form>
+		</table>
+	</td>
+ </tr>
+</form>
+</table>

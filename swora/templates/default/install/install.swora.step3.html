@@ -1,0 +1,52 @@
+<table cellpadding=5 cellspacing=1 bgcolor=black>
+<form action="install.php?step=1" method=post>
+<input type=hidden name="checkstep" value="3">
+ <tr>
+	<th colspan=2 align=left>Eintellungen</th>
+ </tr>
+ <tr>
+	<td colspan=2 class="td_top" width=600>
+		Wir benötigen nun genaue Angaben über ihren Benutzernamen (um root Rechte zu verleihen), ihre eMailaddresse, 
+		und die exakte Url zum dieser Install Datei.
+	</td>
+ </tr>
+ <tr>
+	<td class="td_left" width=400>
+	<b>Admin Benutzername</b><br>
+	<font class="lower">Ihr Benutzername</font>
+	</td>
+	<td class="td_right" width=200><input type=text name="form[admin_username]" value="$dbdata[username]"></td>
+ </tr>
+ <tr>
+	<td class="td_leftb">
+	<b>Admin Benutzerpasswort</b><br>
+	<font class="lower">Ihr BenutzerPasswort</font>
+	</td>
+	<td class="td_rightb"><input type=password name="form[admin_pwd]" value=""></td>
+ </tr>
+ <tr>
+	<td class="td_left">
+	<b>Admin Benutzerpasswort (Bestätigung)</b><br>
+	<font class="lower">Bitte bestätigen Sie das AdminPasswort</font>
+	</td>
+	<td class="td_right"><input type=password name="form[admin_pwd2]" value=""></td>
+ </tr>
+ <tr>
+	<td class="td_leftb">
+	<b>Admin eMail</b><br>
+	<font class="lower">eMailaddresse des Administrators</font>
+	</td>
+	<td class="td_rightb"><input type=text name="form[admin_mail]" value=""></td>
+ </tr>
+ <tr>
+
+	<td class="td_left">
+	<b>Adresse bzw. Url</b><br>
+	<font class="lower">Url zu diesem Pfad (bitte ohne "/" am Ende) <br>Bsp: http://developer.berlios.de/projects/swora</font>
+	</td>
+	<td class="td_right"><input type=text name="form[url]" value="$url"></td>
+ </tr>
+	<td align=center colspan=2 class="td_bottom"><input type=submit value="Einstellungen speichern"></td>
+ </tr>
+</form>
+</table>

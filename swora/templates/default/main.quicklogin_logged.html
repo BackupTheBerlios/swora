@@ -1,0 +1,20 @@
+	<td>
+		<table cellpadding=5 cellspacing=1 width=100% class="main_menu_table">
+		 <tr>
+			<th colspan=6 class="main_menu_th" align=left><font class="main_menu_th_font">{_login[user_login]_} :: {_login[user_name]_}</font></th>
+		 </tr>
+		 <tr>
+			<td align=center class="main_menu_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'" onclick="location.href='index.php?section=profil';"><font class="main_menu_td_font"><a href="index.php?section=profil" class="quickloggedin_td_a">Optionen</a></font></td>
+		 </tr>
+		 <tr>
+			<td align=center class="main_menu_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'" onclick="location.href='index.php?logout=1';"><font class="main_menu_td_font"><a href="index.php?logout=1" class="quickloggedin_td_a">Logout</a></font></td>
+		</tr>
+{_inc[isadmin]_}
+{_inc[isuploader]_}
+		<!-- <tr>
+			<td class="main_menu_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'"><font class="main_menu_td_font">{_login[points]_} Punkte</font></td>
+		 </tr>
+		 //-->
+		</table>
+
+	</td>

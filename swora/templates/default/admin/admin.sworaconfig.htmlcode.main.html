@@ -1,0 +1,33 @@
+<center>
+<table cellpadding=5 cellspacing=1 width=80% class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="save_htmlcode">
+ <tr>
+	<th class="admin_th" align=left><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.htmlcode');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: HtmlCode</font></td>
+ </tr>
+
+ <tr>
+	<td align=center class="admin_td_left"><font class="admin_td_left_font">Beschreibung (Meta-Description)</font></td>
+ </tr>
+ <tr>
+	<td align=center class="admin_td_right"><font class="admin_td_right_font"><input size=90 type=text name="form[meta_description]" value="{_config[meta_description]_}"></font></td>
+ </tr>
+
+ <tr>
+	<td align=center class="admin_td_left"><font class="admin_td_left_font">Author (Meta-Author)</font></td>
+ </tr>
+ <tr>
+	<td align=center class="admin_td_right"><font class="admin_td_right_font"><input size=90 type=text name="form[meta_author]" value="{_config[meta_author]_}"></font></td>
+ </tr>
+
+ <tr>
+	<td align=center class="admin_td_left"><font class="admin_td_left_font">Schlüsselwörter (Meta-KeyWords)</font></td>
+ </tr>
+ <tr>
+	<td align=center class="admin_td_right"><font class="admin_td_right_font"><input size=90 type=text name="form[meta_keywords]" value="{_config[meta_keywords]_}"></font></td>
+ </tr>
+ <tr>
+	<td align=center class="admin_td_left"><input type=submit value="speichern"></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,83 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=500>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="save_mainconfig">
+ <tr>
+	<th colspan=2 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.mainconfig');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: EmailKonfiguration</font></th>
+ </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Email des Webmasters</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="text" name="form[master_email]" value="{_form[master_email]_}"></font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">SMTP benutzen</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="checkbox" value=1 name="form[smtp_use]"{_use_smtp_checkbox_}> Doesn't work well.</font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">SMTP-Adresse</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="text" name="form[smtp_host]" value="{_form[smtp_host]_}"></font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">SMTP-Benutzer</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="text" name="form[smtp_user]" value="{_form[smtp_user]_}"></font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">SMTP-Passwort</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="password" name="form[smtp_pass]" value="{_form[smtp_pass]_}"></font></td>
+	 </tr>
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.designconfig');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Design</font></th>
+ </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Standard Design</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font">
+		<select name="form[defaultstyleset]">
+		{_styles_}
+		</select>
+		</font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Festes Design</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font">
+		<input type="checkbox" value="1" name="form[stylesetstatic]" {_selectstylesetstatic_}>
+		</font></td>
+	 </tr>
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.startsection');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Start Modul</font></th>
+ </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Start Modul:</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font">
+		<select name="form[startsection]">
+		{_secoption_}
+		</select>
+		</font></td>
+	 </tr>
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.avatar');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Avatar</font></th>
+ </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">max. Größe des Avatars</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><input type="text" name="form[avatar_maxsize]" value="{_form[avatar_maxsize]_}" size="10"></font></td>
+	 </tr>
+	 <tr>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font"><a href="index.php?section=admin&adminaction=ftps">FtpId</a></font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font">
+		<select name="form[avatar_ftpid]">
+		<option></option>
+{_ftplist_}
+		</select>
+		</font></td>
+	 </tr>
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.badwords');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Bad Words</font></th>
+ </tr>
+	 <tr valign=top>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">'BadWords'</font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><textarea name="form[badwords]" rows=20>{_form[badwords]_}</textarea></font></td>
+ 	</tr>
+	<tr>
+		<td colspan=2 align=center class="sworaconfig_td_left"><input type=submit value="speichern"></td>
+	</tr>
+
+</table>

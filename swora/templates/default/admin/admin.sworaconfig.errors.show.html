@@ -1,0 +1,31 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="admin_table">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.errors.details');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Errormeldung aus "{_name_}"</font></th>
+ </tr>
+ <tr>
+	<td class="admint_td_left"><font class="admin_td_left_font">ID:</font></td>
+	<td class="admint_td_right"><font class="admin_td_right_font">{_error[id]_}</font></td>
+ </tr>
+ <tr>
+	<td class="admint_td_right"><font class="admin_td_right_font">aufgerufene Url:</font></td>
+	<td class="admint_td_right"><font class="admin_td_right_font">{_error[request_uri]_}</font></td>
+ </tr>
+ <tr>
+	<td class="admint_td_left"><font class="admin_td_left_font">Script:</font></td>
+	<td class="admint_td_right"><font class="admin_td_right_font">{_error[scriptname]_}</font></td>
+ </tr>
+ <tr>
+	<td class="admint_td_right"><font class="admin_td_right_font">Linie:</font></td>
+	<td class="admint_td_right"><font class="admin_td_right_font">{_error[line]_}</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 class="admint_td_left"><font class="admin_td_left_font">Fehlermeldung:</font></td>
+ </tr>
+ </tr>
+	<td colspan=2 class="admint_td_right"><font class="admin_td_right_font"><hr>{_error[text]_}<hr></font></td>
+ </tr>
+</table>
+
+<br><br><br>
+<a href="index.php?section=admin&adminaction=errors">Zurück</a>

@@ -1,0 +1,69 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="admin_table">
+ </tr>
+	<th class="admin_th" colspan=4 align=left><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.trafficlimit');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Verkehr Beschränkung</font></th>
+ </tr>
+ <form action="{_REQUEST_URI_}" method=post>
+ <tr>
+	<input type=hidden name="adminaction" value="limittraffic_activ">
+	<td colspan=2 class="admin_td_left"><font class="admin_td_left_font">Beschränkung aktivieren ?</font></td>
+	<td colspan=2 class="admin_td_right"><font class="admin_td_right_font">Ja <input type="radio" name="form[activ]" value="1"{_on_}> --- Nein <input type=radio name="form[activ]" value="0"{_off_}></font></td>
+ </tr>
+ <tr>
+	<td colspan=4 align=center class="admin_td_left"><input type=submit value="speichern"></td>
+ </tr>
+ </form>
+ <form action="{_REQUEST_URI_}" method=post>
+ <input type=hidden name="adminaction" value="limittraffic_delete">
+{_limitlist_}
+{_pages_}
+ <tr>
+	<td colspan=4 class="admin_td_left" align=center><input type=submit value="löschen"></td>
+ </tr>
+</form>
+</table>
+
+<br><br>
+
+<table cellpadding=5 width=40% cellspacing=1 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post name="selectinglimit">
+<input type=hidden name="adminaction" value="limittraffic_save">
+ </tr>
+	<th class="admin_th" colspan=2 align=left><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.trafficlimit.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: neue Beschränkung <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Beschränken bei mehr als:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text size=5 name="form[size]" value="{_form[size]_}">
+		<select name="form[sizeb]">
+			<option value="1">Byte
+			<option value="1024">KiloByte
+			<option value="1048576">MegaByte
+			<option value="1073741824">GigaByte
+			<option value="1099511627776">TerraByte
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">Beschränken für:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text size=5 name="form[time]" value="{_form[time]_}">
+		<select name="form[timeb]">
+			<option value="day">Tage
+			<option value="week">Wochen
+			<option value="month">Monate
+			<option value="year">Jahre
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td valign=top class="admin_td_left"><font class="admin_td_left_font">zu schliessende Module:</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font">
+		<select name="form[section]">
+			<option value="0">---- ganze Seite -----
+			{_sectionbits_}
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><input type=submit value="erstellen"></td>
+ </tr>
+</table>

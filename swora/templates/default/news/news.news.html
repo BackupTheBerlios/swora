@@ -1,0 +1,27 @@
+	<table width=100% cellpadding=5 cellspacing=1 class="main_table">
+	 <tr>
+		<td class="main_th">
+		 	<table width=100% cellspacing=0 cellpadding=0>
+			 <tr>
+				<th align=left width=200><font class="main_th_font"> {_news[title]_} </font></td>
+				<td><font class="main_td_font">{_user_name_}</font></td>
+				<td width=100 align=right><font class="main_td_font">{_news[date]_}</font></td>
+				<td align=right><font class="main_td_font">| {_comments_} <a href="index.php?section=news&action=news_comment&newsid={_news[id]_}">Kommentare</a> |</font></td>
+			 </tr>
+			</table>
+		</td>
+	 </tr>
+
+
+	 <tr>
+		<td colspan=4 class="main_td">
+			<div style="text-align: justify">
+			<font class="main_td_font">
+
+				{_news[text]_}
+
+			</font>
+			</div>
+		</td>
+	 </tr>
+	</table>

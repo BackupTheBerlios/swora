@@ -1,0 +1,42 @@
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="profil">
+<input type=hidden name="action" value="save_privacy">
+ <tr>
+	<th colspan=2 align=left class="main_th"><font class="main_th_font">Kapazitäten</font><font class="fail_text">&nbsp;&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left" width=25%><font class="main_td_font">PMs</font></td>
+	<td class="main_td_right"><font class="main_td_font">
+		<table width=100% cellpadding=0 cellspacing=0>
+		 <tr>
+			<td class="main_td_left"><font class="main_td_font">Incoming</font></td>
+		 <tr>
+		 </tr>
+			<td class="main_td_right"><font class="main_td_font">{_statusbar[incoming]_} {_status[incoming]_} %</font></td>
+		 </tr>
+		 <tr>
+			<td class="main_td_left"><font class="main_td_font">Outgoing</font></td>
+		 <tr>
+		 </tr>
+			<td class="main_td_right"><font class="main_td_font">{_statusbar[outgoing]_} {_status[outgoing]_} %</font></td>
+		 </tr>
+		</table>
+	</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left" width=25%><font class="main_td_font">Folders</font></td>
+	<td class="main_td_right"><font class="main_td_font">
+		<table width=100% cellpadding=0 cellspacing=0>
+		 <tr>
+			<td class="main_td_left"><font class="main_td_font">Folders</font></td>
+		 <tr>
+		 </tr>
+			<td class="main_td_right"><font class="main_td_font">{_statusbar[folder]_} {_status[folder]_} %</font></td>
+		 </tr>
+		</table>
+	</font></td>
+ </tr>
+</table>
+
+</form>

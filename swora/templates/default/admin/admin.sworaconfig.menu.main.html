@@ -1,0 +1,171 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=700>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="{_newedit_}">
+<input type=hidden name="section" value="admin">
+<input type=hidden name="linkid" value="{_linkid_}">
+
+ <tr>
+	<th colspan=2 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.menu.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Menupunkt erstellen</font><font class="fail_text">&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+	 <tr>
+		<th width=35% align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Sorte des Menupunkts
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<select name="form[sort]">
+					<option></option>
+					<option value="cat"{_catselect_}>Kategorie</option>
+					<option value="link"{_linkselect_}>Link</option>
+					<option value="html"{_htmlselect_}>HTML-Code</option>
+					<option value="script"{_scriptselect_}>Hack/Skript</option>
+				</select>
+			</font>
+		</th>
+	 </tr>
+
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Position
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<select name="form[position]">
+					<option value="0"{_topselect_}>oben</option>
+					<option value="1"{_leftselect_}>links</option>
+					<option value="2"{_rightselect_}>rechts</option>
+					<option value="3"{_bottomselect_}>unten</option>
+				</select>
+			</font>
+		</th>
+	 </tr>
+ <tr>
+	<th colspan=1 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">Unterkategorie</font></th>
+	<th align=right class="sworaconfig_th"><font class="sworaconfig_th_font"><strike>Kategorie</strike>|Link|HTML|<strike>Skript</strike></font></th>
+ </tr>
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Unterkategorie
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<select name="form[subcat]">
+					<option></option>
+					{_subcats_}
+				</select>
+			</font>
+		</th>
+	 </tr>
+ <tr>
+	<th colspan=1 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">Link</font></th>
+	<th align=right class="sworaconfig_th"><font class="sworaconfig_th_font"><strike>Kategorie</strike>|Link|<strike>HTML</strike>|<strike>Skript</strike></font></th>
+ </tr>
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Titel
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<input type=text name="form[title]" value="{_form[title]_}">
+			</font>
+		</th>
+	 </tr>
+
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Ziel
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<input type=text name="form[href]" value="{_form[href]_}" size=50>
+			</font>
+		</th>
+	 </tr>
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Ziel Frame 
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<input type=text name="form[target]" value="{_form[target]_}" size=10> (Standard: "_self" oder nichts)
+			</font>
+		</th>
+	 </tr>
+ <tr>
+	<th colspan=1 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">HTML</font></th>
+	<th align=right class="sworaconfig_th"><font class="sworaconfig_th_font"><strike>Kategorie</strike>|<strike>Link</strike>|HTML|<strike>Skript</strike></font></th>
+ </tr>
+	 <tr valign=top>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				HTML Code
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<textarea cols=40 rows=10 name="form[html]">{_form[html]_}</textarea>
+			</font>
+		</th>
+	 </tr>
+
+ <tr>
+	<th colspan=1 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">Skript</font></th>
+	<th align=right class="sworaconfig_th"><font class="sworaconfig_th_font"><strike>Kategorie</strike>|<strike>Link</stike>|<strike>HTML</strike>|Skript</font></th>
+ </tr>
+	 <tr>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Skript <br> in "./includes/"
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<input type=text name="form[script]" value="{_form[script]_}" size=40>
+			</font>
+		</th>
+	 </tr>
+ <tr>
+	<th colspan=1 align=left class="sworaconfig_th"><font class="sworaconfig_th_font">Anzeigen</font></th>
+	<th align=right class="sworaconfig_th"><font class="sworaconfig_th_font">Kategorie|Link|HTML|Skript</font></th>
+ </tr>
+
+	 <tr valign=top>
+		<th  align=left class="sworaconfig_td_left">
+			<font class="sworaconfig_td_left_font">
+				Anzeigen
+			</font>
+		</th>
+
+		<th  align=left class="sworaconfig_td_right">
+			<font class="sworaconfig_td_right_font">
+				<input type=checkbox value="1" name="form[showonlylogin]"{_loginselect_}> 	Nur für eingeloggte Personen<br>
+				<input type=checkbox value="1" name="form[showonlylogout]"{_logoutselect_}> 	Nur für ausgeloggte Personen
+			</font>
+		</th>
+	 </tr>
+ <tr>
+	<td colspan=2 align=center class="sworaconfig_td_right"><input type=submit value="erstellen"></td>
+ </tr>
+</form>
+</table>

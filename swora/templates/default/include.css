@@ -1,0 +1,81 @@
+body {
+	background-color:#FFFFFF;
+	font-family: Helvetica,Arial;
+	color:black;
+	font-size: 12px;
+	}
+
+a:link { color:black; }
+a:visited { color:black; }
+a:active { color:black; }
+a:hover { color:black; }
+
+input { font-size: 12px;font-family:Helvetica,arial;background-color:white;background-image:url('/images/inputbg.gif');border:1 solid #777777; }
+textarea { font-size: 12px;font-family:Helvetica,arial;background-color:white;background-image:url('/images/inputbg.gif');border:1 solid #777777; }
+select { font-size: 12px;font-family:Helvetica,arial;background-color:white;background-image:url('/images/inputbg.gif'); }
+hr {  }
+
+	.main_table_top {  }
+
+	.main_menu_table { background-color:#aaaaaa }
+	.main_menu_cattable { }
+	.main_menu_th { background-color:#eeeeee;background:url('/images/th.gif'); }
+	.main_menu_th_font { font-size:10px }
+	.main_menu_td { background-color:white; }
+	.main_menu_td_font { font-size:10px }
+	.main_menu_td_a:link { color:black;text-decoration:none; }
+	.main_menu_td_a:visited { color:black;text-decoration:none; }
+	.main_menu_td_a:hover { color:black;text-decoration:none; }
+
+	.main_table { background-color:#aaaaaa; }
+	.main_font { font-size:11px;font-family:Helvetica,Arial }
+	.main_th { background-color:#eeeeee; background:url('/images/th.gif'); }
+	.main_th_font { font-size:10; }
+	.main_td { background-color:white;  }
+	.main_td_font { font-size:11; }
+	.main_td_left { background-color:#f5f5f5; }
+	.main_td_left_font { font-size:11; }
+	.main_td_right { background-color:#dfdfdf; }
+	.main_td_right_font { font-size:11; }
+	.main_td_bottom {  }
+	.main_td_bottom_font { font-size:10; }
+
+	.main_sworastats {  }
+	.main_sworastats_font { font-family:Helvetica,Arial;font-size:10;color:black; }
+
+	.fail_table { background-color:#777777; }
+	.fail_th { background-color:#eeeeee; }
+	.fail_th_font { font-size:10 }
+	.fail_td { background-color:#ffffff; }
+	.fail_td_font { font-size:10 }
+	.fail_text { color:red;font-size:10; }
+
+	.login_table { background-color:#777777 }
+	.login_th { background-color:#eeeeee; }
+	.login_th_font { font-size:10; }
+	.login_td_left { background-color:#f5f5f5; }
+	.login_td_left_font { font-size:10; }
+	.login_td_right { background-color:#dfdfdf; }
+	.login_td_right_font { font-size:10; }
+
+	.quicklogin_table { background-color:#aaaaaa }
+	.quicklogin_td { background-color:#f5f5f5; }
+	.quicklogin_td_font { font-size:9;font-family:Arial;color:black; }
+	.quicklogin_td_input {  }
+	.quicklogin_input { font-size:9;font-family:Arial; }
+	.quicklogin_input_submit { font-size:9; }
+
+	.quickloggedin_table { background-color:#aaaaaa }
+	.quickloggedin_th {  }
+	.quickloggedin_th_font { font-size:9; }
+	.quickloggedin_td {  }
+	.quickloggedin_td_a:link { }
+	.quickloggedin_td_a:visited { }
+	.quickloggedin_td_a:hover { }
+	.quickloggedin_td_font { font-size:9; }
+
+	.special_text { color:red;font-size:9;font-weight:bold }
+
+	.finished_text_head { font-size:11;font-weight:bold;text-decoration:underline;color:black; }
+	.finished_text { font-size:10;color:black; }
+	.finished_text_signatur { font-size:9;font-weight:bold;font-style:italic;text-decoration:underline;color:black; }

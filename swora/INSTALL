@@ -1,0 +1,94 @@
+                              Swora Community Script
+                             Version 2, Oktober 2003
+
+  	   	             Copyright (C) 2002 XeRoc
+			      Swora Community Script
+
+
+
+				    INSTALLATION
+____________________________________________________________________________________________
+Schritt 1: Upload
+
+		Laden Sie alle Dateien dieser Community auf einen ihren Server.
+		Folgende Abhängigkeiten bestehen:
+			- PHP 			(Version 4 - 4.2 werden unterstützt)
+			- MySql Datenbank 	(kann auch auf einem anderen Server liegen)
+			- > 1 MB Speicher	(bei weniger sind keine Avatars möglich)
+			- Ftp Zugang		(zum Upload der Avatars)
+____________________________________________________________________________________________
+Schritt 2: CHMOD
+
+		Auf die Datei "errors.html" musse, auf grund des Fehlerreports 
+		geschrieben werden können.
+		Auch wenn keine Fehler enstehen sollten, kann es durch Bedinungsfehlern
+		zu solchen kommen.
+
+____________________________________________________________________________________________
+Schritt 3: .htaccess
+
+		um die FehlerSeiten korrekt anzeigen zu können, müssen sie die Zeilen
+
+			========.htaccess========================
+			ErrorDocument 301 http://xyz.www/index.php?section=error&error=301
+			ErrorDocument 302 http://xyz.www/index.php?section=error&error=403
+			ErrorDocument 404 http://xyz.www/index.php?section=error&error=404
+			ErrorDocument 500 http://xyz.www/index.php?section=error&error=500
+			========================================
+
+		nach Ihren .htaccess anpassen.
+		Es genügt die Domain (in diesem Fall xyz.www) in die Ihrige umzustellen und
+		gegebenenfalls den Pfad der Datei "index.php" anzufügen.
+____________________________________________________________________________________________
+Schritt 4: Installation
+
+		Nachdem Sie alle Daten auf ihren Server geladen haben, können Sie nun die
+		Seite über ihren Browser öffnen. Sie werden automatisch auf die 
+		"install.php" weitergeleitet.
+		(Sie können ebenso gleich die "install.php" aufrufen).
+
+		Die Hinweise führen Sie durch die Installation.
+
+			========================================
+			Bitte vergessen Sie nicht, die im Setup erstellten Daten in die
+			Datei "inc.config.php" im "/includes" Verzeichnis zu übernehmen.
+			========================================
+____________________________________________________________________________________________
+Schritt 5: FTP - Account einrichten
+
+		========================================
+		Um Dem User die Möglichkeit zu geben einen Avatar hochzuladen, müssen Sie
+		Zugriff auf einen FTP-Server haben.
+		========================================
+
+		Ftp-Account einrichten:
+			Gehen Sie in den AdminBereich der Community und gehen Sie auf 
+			"Ftp-Accounts".
+				-------------------------------------
+				Title		Titel für den FtpAccount
+				Host		Host/IP zum FtpServer
+				Port		Port des Servers
+				Username	BenutzerName
+				UserPwd		BenutzerPasswort
+				Pfad		Pfad für die Unterbringung 
+						der Avatars
+						(dieser Pfad muss 
+						 ins Verzechnis "images/avatar"
+						 zeigen)
+				-------------------------------------
+
+		Avatar einrichten:
+			Nun können Sie in "Main Config" in der Rubrik "avatar" den passenden
+			FtpServer auswählen.
+
+		Der AvatarUpload sollte nun eingerichtet sein. Sie können es in ihrem 
+		UserProfil testen.
+____________________________________________________________________________________________
+Schritt 6: Starten der Community
+
+		Die Installation ist nun vollendet.
+		Sie können die Seite nun starten.
+		Bitte loggen Sie sich mit den Daten aus dem Setup ein und besuchen
+		Sie den AdministrationsBereich.
+
+____________________________________________________________________________________________

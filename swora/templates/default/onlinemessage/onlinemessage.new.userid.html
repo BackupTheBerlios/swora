@@ -1,0 +1,24 @@
+<table cellpadding=5 cellspacing=1 width=100% class="main_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="saveom" value="userid">
+<input type=hidden name="userid" value="{_userid_}">
+ <tr>
+	<th align=left colspan=2 class="main_th"><font class="main_th_font">OnlineMessage versenden &nbsp; &nbsp; &nbsp; <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Absender:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_user_name_}</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Empänger:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">{_target_}</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Text:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><textarea cols=40 rows=5 name="form[text]">{_form[text]_}</textarea></font></td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="main_td_left"><font class="main_td_left_font"><input type=submit value="versenden"></font></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,29 @@
+<center>
+<table width=50% class="admin_table" cellpadding=5 cellspacing=1>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="install_hack">
+ <tr>
+	<th align=left class="admin_th" colspan=2><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.hack.install');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Einen neuen Hack installieren &nbsp; &nbsp; &nbsp;<font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font"><b>Neuer Hack</b><br>Dateiname in "./includes/"</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[hackfile]" value="{_form[hackfile]_}"></font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="admin_td_left"><input type=submit value="installieren"></td>
+ </tr>
+</form>
+</table>
+
+
+<br>
+<br>
+
+
+
+<table width=50% class="admin_table" cellpadding=5 cellspacing=1>
+ <tr>
+	<th align=left class="admin_th" colspan=2><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.hack.uninstall');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Deinstallation eines Hacks</font></th>
+ </tr>
+{_hacklist_}
+</table>

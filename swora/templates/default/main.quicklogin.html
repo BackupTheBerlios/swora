@@ -1,0 +1,42 @@
+	<td>
+	<script language="javascript" src="md5.js"></script>
+	<script language="javascript">
+	<!--
+	function dologinquick() {
+		document.forms["submitquick"].elements["loginform[username]"].value 		= document.forms["enteredquick"].elements["username"].value
+		document.forms["submitquick"].elements["loginform[userpassword]"].value 	= calcMD5(document.forms["enteredquick"].elements["userpwd"].value)
+		document.forms["submitquick"].elements["loginform[md5]"].value				= "1";
+		document.forms["submitquick"].submit();
+	}
+	//-->
+	</script>
+		<table cellpadding="5" cellspacing="1" class="main_menu_table">
+		<form action="index.php" method=post name="submitquick">
+		<input type=hidden name="logout" value="0">
+		<input type=hidden name="dothelogin" value="1">
+		<input type=hidden name="loginform[username]" value="">
+		<input type=hidden name="loginform[userpassword]" value="">
+		<input type=hidden name="loginform[md5]" value="">
+		{_session_form_}
+		</form>
+
+		<form action="index.php" method=post name="enteredquick">
+		 <tr>
+			<th colspan=3 align=center class="main_menu_th"><font class="main_menu_th_font">Login</font></th>
+		 </tr>
+		 <tr>
+			<td class="quicklogin_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'">
+				<font class="quicklogin_td_font">Benutzername:<input class="quicklogin_input" type="text" name="username" style="width:80" value="{_loginform[username]_}" size=10>
+			</td>
+			<td class="quicklogin_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'">
+				<font class="quicklogin_td_font">Password: <input class="quicklogin_input" type="password" name="userpwd" size="10" value="" style="width:80">
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center class="quicklogin_td" onmouseover="this.style.backgroundColor='#67C5F1';this.style.border='1 solid #0078B0';" onmouseout="this.style.backgroundColor='white';this.style.border='1 solid white'">
+				<font class="quicklogin_td_font"><input onclick="dologinquick();return FALSE;" type="button" value="OK" style="width:80" class="quicklogin_input_submit">
+			</td>
+		 </tr>
+		</form>
+		</table>
+	</td>

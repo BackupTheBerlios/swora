@@ -1,0 +1,44 @@
+
+<center>
+
+{_autosetup_}
+
+<br><br>
+
+
+
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=600>
+ <tr>
+	<th colspan=5 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.sections');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Module</font></th>
+ </tr>
+
+	{_sections_}
+
+ <tr>
+	<td colspan=5 align=center class="sworaconfig_td_left"><font class="sworaconfig_td_left_font"><b>Beim Deinstallieren gehen sämtliche Daten (in der Datenbank) dieses Modules verloren</b></font></th>
+ </tr>
+</table>
+
+<br><br>
+
+<table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=400>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="section" value="admin">
+<input type=hidden name="adminaction" value="save_section">
+
+ <tr>
+	<th colspan=2 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.sections.new');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: manuelle Einrichtung einer Section</font><font class="fail_text">&nbsp;&nbsp;&nbsp; {_fail_}</font></th>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Modul in 'sections/':</font></td>
+	<td class="sworaconfig_td_right"><font class="sworaconfig_td_font"><input type=text name="form[title]"></font></td>
+ </tr>
+ <tr>
+	<td class="sworaconfig_td_left"><font class="sworaconfig_td_font">Beschreibung:</font></td>
+	<td class="sworaconfig_td_right"><font class="sworaconfig_td_font"><input type=text name="form[name]"></font></td>
+ </tr>
+ <tr>
+	<td align=center colspan=2 class="sworaconfig_td_left"><font class="sworaconfig_td_font"><input type="submit" value="speichern"></font></td>
+ </tr>
+</form>
+</table>

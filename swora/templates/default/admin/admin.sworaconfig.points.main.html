@@ -1,0 +1,23 @@
+<center>
+<table cellpadding=5 cellspacing=1 width=450 class="admin_table">
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="points_save">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.points');"><img src="images/icons/info.gif" border=0 alt="Info"></a> :: Punkte</font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">...für eine aktivierte News</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[p_news_activate]" value="{_config[p_news_activate]_}"></font></td>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font">...für einen Kommentar auf eine News</font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><input type=text name="form[p_news_com]" value="{_config[p_news_com]_}"></font></td>
+ </tr>
+{_otherpoints_}
+ <tr>
+	<td align=center colspan=2 class="admin_td_left"><font class="admin_td_left_font"><input type=submit value="speichern"></font></td>
+ </tr>
+</form>
+</table>
+
+

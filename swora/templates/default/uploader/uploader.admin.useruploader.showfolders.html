@@ -1,0 +1,25 @@
+<center>
+<table>
+ <tr valign=middle align=center>
+	<td>
+		<table cellpadding=5 cellspacing=1 width=100% class="admin_table">
+		<form action="{_REQUEST_URI_}" method=post>
+		<input type=hidden name="adminaction" value="userupload_delete_path">
+		<input type=hidden name="userid" value="{_userid_}">
+		 <tr>
+			<th colspan=3 align=left class="admin_th"><font class="admin_th_font">Ordner von "{_user[user_login]_}"</font></th>
+		 </tr>
+		 <tr>
+			<td class="admin_td_left">
+				<select name="form[path]">
+		{_paths_}
+				</select>
+			</td>
+			<td class="admin_td_right"><font class="admin_td_left_font"><input type=submit value="Freigabe aufheben"></font></td>
+		 </tr>
+		</form>
+		</table>
+	</td>
+ </tr>
+</table>
+</center>

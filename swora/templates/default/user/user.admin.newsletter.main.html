@@ -1,0 +1,20 @@
+<center>
+<table cellpadding=5 cellspacing=1 class="admin_table" width=750>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="newsletter_send">
+ <tr>
+	<th colspan=2 align=left class="admin_th"><font class="admin_th_font">Newsletter &nbsp;&nbsp;&nbsp; <font class="fail_text">{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="admin_td_left"><font class="admin_td_left_font"> Betreff: </font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"> <input type=text name="form[subject]"> </font></td>
+ </tr>
+ <tr valign=top>
+	<td class="admin_td_left"><font class="admin_td_left_font">  Text: </font></td>
+	<td class="admin_td_right"><font class="admin_td_right_font"><textarea name="form[body]" cols=50 rows=10></textarea></font></td>
+ </tr>
+ <tr>
+	<td align=center class="admin_td_left" colspan=2><font class="admin_td_left_font"> <input type=submit value="Senden"> </font></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,149 @@
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="action" value="createnewaccount">
+{_session_form_}
+<table cellpadding="5" cellspacing="1" width=100% class="main_table" border=0>
+ <tr>
+	<th colspan=2 class="main_th" align=left><font class="main_th_font">Anmeldung<font class="fail_text">&nbsp;&nbsp;{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td width=25% class="main_td_left"><font class="main_td_left_font">Benutzername:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[user_login]" value="{_form[user_login]_}" size=15></font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">vollständiger Name:</font></td>
+	<td class="main_td_right"><input type="text" name="form[user_name]" value="{_form[user_name]_}"></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Registrierungs eMail:</font></td>
+	<td class="main_td_right"><input type=text name="form[reg_email]" value="{_form[reg_email]_}" size="20"></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">offizielle eMail</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_email]" value="{_form[user_email]_}" size=40>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Ort:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font"><input type=text name="form[user_location]" value="{_form[user_location]_}" size=40></font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">ICQ: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_icq]" value="{_form[user_icq]_}" size=20>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">AIM: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_aim]" value="{_form[user_aim]_}" size=20>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Yim: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_yim]" value="{_form[user_yim]_}" size=20>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Homepage: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_hp]" value="{_form[user_hp]_}" size=30>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Arbeit:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<input type=text name="form[user_work]" value="{_form[user_work]_}" size=20>
+	</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Interessen: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<textarea name="form[user_interests]" cols=40 rows=5>{_form[user_interests]_}</textarea>
+	</font></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_right"><font class="main_td_right_font">Bemerkungen: *</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<textarea name="form[user_text]" cols=40 rows=5>{_form[user_text]_}</textarea>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Geburtstag:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<select name="form[birthday]">
+			<option></option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+			<option>14</option>
+			<option>15</option>
+			<option>16</option>
+			<option>17</option>
+			<option>18</option>
+			<option>19</option>
+			<option>20</option>
+			<option>21</option>
+			<option>22</option>
+			<option>23</option>
+			<option>24</option>
+			<option>25</option>
+			<option>26</option>
+			<option>27</option>
+			<option>28</option>
+			<option>29</option>
+			<option>30</option>
+			<option>31</option>
+		</select>
+		<select name="form[birthmonth]">
+			<option></option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+		</select>
+		<input name="form[birthyear]" value="19" maxlength=4 size=5>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font">Geschlecht:</font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		<select name="form[user_gender]">
+			<option></option>
+			<option value="1">männlich</option>
+			<option value="2">weiblich</option>
+		</select>
+	</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_right"><font class="main_td_right_font"></font></td>
+	<td class="main_td_right"><font class="main_td_right_font">
+		*  Keine Pflichtfelder
+	</font></td>
+ </tr>
+ <tr>
+	<td colspan=2 align=center class="main_td_left">
+		<font class="main_td_left_font"><input type=submit value="Fertigstellen"></font>
+	</td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,29 @@
+	<table cellpadding=5 cellspacing=1 class="main_table" width=100%>
+	<form action="{_REQUEST_URI_}" method=post>
+	<input type=hidden name="action" value="new_comment_save">
+	<tr>
+		<th colspan=3 align=left class="main_th"><font class="main_th_font">kommentieren &nbsp;&nbsp;&nbsp; <font class="fail_text">{_fail_}</font></font></th>
+	</tr>
+	<tr>
+		<td class="main_td_left">
+			<font class="main_td_left_font">
+			Author: 
+				<input type=text name="form[autname]" value="{_form[autname]_}" tabindex=1>
+			</font>
+			</td>
+		<td class="main_td_right">
+			<font class="main_td_right_font">
+			Titel: 
+				<input type=text name="form[title]" value="{_form[title]_}" tabindex=2>
+			</font>
+			</td>
+		<td class="main_td_left" align=right>
+			<input type=submit value="abschicken">
+		</td>
+ 	 </tr>
+	 <tr>
+		<td colspan=3 class="main_td_right" align=center>
+			<textarea name="form[text]" cols=60 rows=5 tabindex=3>{_form[text]_}</textarea>
+		</td>
+	 </tr></form>
+	</table>

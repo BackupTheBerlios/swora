@@ -1,0 +1,60 @@
+<script language="javascript">
+<!--
+function news_setsmilie(a) {
+	document.forms["news_form"].elements["form[text]"].value += " |"+a+"| ";
+}
+//-->
+</script>
+
+<form action="{_REQUEST_URI_}" method="post" name="main_table">
+<input type=hidden name="action" value="{_thisaction_}">
+{_session_form_}
+<table cellpadding="5" cellspacing="1" width=100% class="main_table">
+ <tr>
+	<th colspan=2 class="news_main_th" align=left><font class="news_main_th_font">News einliefern<font class="fail_text">&nbsp;&nbsp;{_fail_}</font></font></th>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Benutzername:</font></td>
+	<td class="main_td_right"><font class="main_td_left_font">{_user_name_}</font></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Titel:</font></td>
+	<td class="main_td_right"><input type="text" name="form[title]" value="{_form[title]_}"></td>
+ </tr>
+ <tr valign=top>
+	<td class="main_td_left"><font class="main_td_left_font">Text:</font></td>
+	<td class="main_td_right"><textarea cols=50 rows=15 name="form[text]">{_form[text]_}</textarea></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Smilies</font></td>
+	<td class="main_td_right">
+		<table width=100% cellpadding=0 cellspacing=0>
+		 <tr>
+			<td>
+				{_smilies_}
+			</td>
+		 </tr>
+		</table>
+	</td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">Smilies aktivieren:</font></td>
+	<td class="main_td_right"><select name="form[smilies]">
+		<option value="1">Ja</option>
+		<option value="0">Nein</option>
+	</select></td>
+ </tr>
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font">HTML aktivieren:</font></td>
+	<td class="main_td_right"><select name="form[html]">
+		<option value="1">Ja</option>
+		<option value="0" selected>Nein</option>
+	</select></td>
+ </tr>
+{_admin_}
+ <tr>
+	<td class="main_td_left"><font class="main_td_left_font"></font></td>
+	<td class="main_td_right">	<input type="submit" value="einliefern">
+					<input type="reset" value="löschen"></td>
+ </tr></form>
+</table>

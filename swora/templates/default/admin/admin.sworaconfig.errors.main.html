@@ -1,0 +1,23 @@
+<center>
+<table cellpadding=5 cellspacing=1 width=100% class="admin_table">
+<form action="{_REQUEST_URI_}" method=post name="errors">
+<input type=hidden name="adminaction" value="error_delete">
+ <tr>
+	<th align=left class="admin_th"><font class="admin_th_font"><a href="#" onclick="open_help('admin.module.swora.errors');"><img src="images/icons/info.gif" border=0 alt="Info"></a></font></th>
+	<th align=left class="admin_th"><font class="admin_th_font">Fehler</font></th>
+	<th align=left class="admin_th"><font class="admin_th_font">Request_Uri</font></th>
+	<th align=left class="admin_th"><font class="admin_th_font">ScriptName</font></th>
+	<th align=left class="admin_th"><font class="admin_th_font">Zeile</font></th>
+ </tr>
+{_errorbits_}
+ <tr>
+	<td  colspan=3 align=left class="admin_td_left"><font class="admin_td_left_font">
+		| <a href="javscript:setboxvalue(errors,1)">Alle auswählen</a> | <a href="javscript:setboxvalue(errors,2)">Auswahl entfernen</a> | <a href="javscript:setboxvalue(errors,3)">Merkierung umkehren</a> |
+	</font></td>
+	<td  colspan=3 align=right class="admin_td_left"><font class="admin_td_left_font"><< {_page_} >></font></td>
+ </tr>
+ <tr>
+	<td align=center colspan=5 class="admin_td_right"><input type=submit value="Auswahl löschen"></td>
+ </tr>
+</form>
+</table>

@@ -1,0 +1,23 @@
+<center><table cellpadding=5 cellspacing=1 class="sworaconfig_table" width=500>
+<form action="{_REQUEST_URI_}" method=post>
+<input type=hidden name="adminaction" value="save_bannes">
+ <tr>
+	<th colspan=3 align=left class="sworaconfig_th"><font class="sworaconfig_th_font"><a href="#" onclick="open_help('admin.module.swora.bannes');"><img src="images/icons/info.gif" border=0 alt="Info"> :: </a>Verbannungen</font></th>
+ </tr>
+	 <tr valign=top>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Gebannte Emails<br><i>getrennt mit Leerzeichen</i></font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><textarea name="form[ban_email]">{_config[ban_email]_}</textarea></font></td>
+ 	</tr>
+	 <tr valign=top>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Gebannte Names<br><i>getrennt mit Leerzeichen</i></font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><textarea name="form[ban_name]">{_config[ban_name]_}</textarea></font></td>
+ 	</tr>
+	 <tr valign=top>
+		<td align=left class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">Gebannte IPs<br><i>getrennt mit Leerzeichen<br>Platzhalter: %</i></font></td>
+		<td align=left class="sworaconfig_td_right"><font class="sworaconfig_td_right_font"><textarea name="form[ban_ips]">{_config[ban_ips]_}</textarea></font></td>
+ 	</tr>
+	<tr>
+		<td colspan=2 align=center class="sworaconfig_td_left"><input type=submit value="Save"></td>
+	</tr>
+
+</table>

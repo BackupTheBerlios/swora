@@ -1,0 +1,18 @@
+<table cellpadding=0 cellspacing=0 width=100%>
+ <tr>
+	<!--<td>
+		<font class="user_users_td_font"><a target="_blank" href="index.php?section=pm&action=new_pm&targetid={_user[id]_}">Private Nachrichte schicken</a></font></td>//-->
+
+	<td>
+		<font class="user_users_td_font"><a target="_blank" href="index.php?section=contact&who=user&userid={_user[id]_}">eMail schicken</a></font></td>
+
+	<td>
+		<font class="user_users_td_font"><a href="#" onclick="openugb({_user[id]_})">Mitgliedergästebuch</a></font></td>
+
+	<td>
+		<font color=white size=1>Abstimmen:<a href="index.php?section=user&action=voteuser_pos&userid={_user[id]_}">++</a> | <a href="index.php?section=user&action=voteuser_neg&userid={_user[id]_}">--</a> </font></td>
+
+	<td align=right>
+		<font class="user_users_td_font"><a href="#" onclick="open_newomsg({_user[id]_})">OnlineMessage schicken</a></font></td>
+ </tr>
+</table>

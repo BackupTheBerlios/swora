@@ -1,0 +1,12 @@
+ <tr>
+	<form action="{_REQUEST_URI_}" method=post>
+	<input type=hidden name="section" value="admin">
+	<input type=hidden name="adminaction" value="do_section">
+	<input type=hidden name="sectionid" value="{_se[id]_}">
+		<td align=center class="sworaconfig_td_right"><font class="sworaconfig_td_left_font"><b>{_se[title]_}</b></font></th>
+		<td align=center class="sworaconfig_td_left"><font class="sworaconfig_td_left_font"><a href="index.php?section=admin&secid={_se[id]_}&adminaction=section_edit">{_se[name]_}</a></font></th>
+		<td align=center class="sworaconfig_td_right"><font class="sworaconfig_td_left_font"><b>{_modulversion_}</b></font></th>
+		<td align=center class="sworaconfig_td_left"><font class="sworaconfig_td_left_font">{_do_}</font></th>
+		<td align=center class="sworaconfig_td_left"><input type=submit value="Deinstallieren" name="form[delete]"></td>
+	</form>
+ </tr>
